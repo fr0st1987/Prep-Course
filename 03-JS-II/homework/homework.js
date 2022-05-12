@@ -139,13 +139,7 @@ function fizzBuzz(numero) {
 }
 
 
-function operadoresLogicos(num1, num2, num3) {
-  //La función recibe tres números distintos. 
-  //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
-  //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
-  //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
-  //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
-  //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+
   function operadoresLogicos(num1, num2, num3) {
     //La función recibe tres números distintos. 
     //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
@@ -153,35 +147,45 @@ function operadoresLogicos(num1, num2, num3) {
     //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
     //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
     //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-  if ((num1 > num2) && (num1 > num3) && (Math.sign(num1) === 1)) {
-    return 'Número 1 es mayor y positivo';
-  }
-    else if ((Math.sign(num1)) === -1 || (Math.sign(num2)) === -1 || (Math.sign(num3)) === -1) {
+  if (num1 === 0 || num2 === 0 || num3 === 0) {
+      return 'Error'
+    }
+  else if ((Math.sign(num1)) === -1 || (Math.sign(num2)) === -1 || (Math.sign(num3)) === -1) {
       return 'Hay negativos';
   }
-    else if ((num3 > num1) && (num3 > num2)) {
-      return num3 + 1;
+  else if ((num1 > num2) && (num1 > num3) && (Math.sign(num1) === 1)) {
+      return 'Número 1 es mayor y positivo';
   }
-    else if (num1 === 0 || num2 === 0 || num3 === 0) {
-    return 'Error'
+  else if ((num3 > num1) && (num3 > num2)) {
+      return num3 + 1;
   }
   else return 'False'
   }
 
-function esPrimo(numero) {
-  // Devuelve "true" si "numero" es primo
-  // De lo contrario devuelve "falso"
-  // Pista: un número primo solo es divisible por sí mismo y por 1
-  // Pista 2: Puedes resolverlo usando un bucle `for`
-  // Nota: Los números 0 y 1 NO son considerados números primos
-}
+  function esPrimo(numero) {
+    // Devuelve "true" si "numero" es primo
+    // De lo contrario devuelve "falso"
+    // Pista: un número primo solo es divisible por sí mismo y por 1
+    // Pista 2: Puedes resolverlo usando un bucle `for`
+    // Nota: Los números 0 y 1 NO son considerados números primos
+    for (let primos; (primos % primos) === 0 && (primos / 1) === primos; primos++) {
+      numero = numero + 1
+      return true
+    }
+  };
+  
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-
-}
+  if (valor === true) {
+    return 'Soy verdadero'
+  }
+  else if (valor === false) {
+      return 'Soy falso'
+  }
+  }
 
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
