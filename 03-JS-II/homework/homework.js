@@ -159,8 +159,10 @@ function fizzBuzz(numero) {
   else if ((num3 > num1) && (num3 > num2)) {
       return num3 + 1;
   }
-  else return 'False'
+  else {
+    return 'False'
   }
+}
 
   function esPrimo(numero) {
     // Devuelve "true" si "numero" es primo
@@ -191,13 +193,19 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  for (let six = 0; six >= 60; six++ )
+  return.array 
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+  if (numero >= 100) {
+    return true;
+  }
+else {
+    return false;
+  }
 }
 
 function doWhile(numero) {
