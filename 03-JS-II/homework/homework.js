@@ -160,7 +160,7 @@ function fizzBuzz(numero) {
       return num3 + 1;
   }
   else {
-    return 'False'
+    return 'false'
   }
 }
 
@@ -200,7 +200,7 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if (numero >= 100) {
+  if ((numero >= 100) && (numero < 1000)) {
     return true;
   }
 else {
