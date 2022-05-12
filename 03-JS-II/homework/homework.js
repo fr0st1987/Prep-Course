@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { checkIsBareRepoTask } = require("simple-git/src/lib/tasks/check-is-repo");
+
 function obtenerMayor(x, y) {
   // "x" e "y" son números enteros (int).
   // Devuelve el número más grande
@@ -72,7 +74,23 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.ce
-}
+  switch(color) {
+    case 'blue': 
+      return 'This is blue';
+    break;
+    case 'red':
+      return 'This is red';
+    break;
+    case 'green':
+      return 'This is green';
+    break;
+    case 'orange':
+      return 'This is orange';
+    break;
+    default:
+      return 'Color not found'
+  }
+  }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
@@ -128,7 +146,27 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-}
+  function operadoresLogicos(num1, num2, num3) {
+    //La función recibe tres números distintos. 
+    //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
+    //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
+    //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
+    //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
+    //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  if ((num1 > num2) && (num1 > num3) && (Math.sign(num1) === 1)) {
+    return 'Número 1 es mayor y positivo';
+  }
+    else if ((Math.sign(num1)) === -1 || (Math.sign(num2)) === -1 || (Math.sign(num3)) === -1) {
+      return 'Hay negativos';
+  }
+    else if ((num3 > num1) && (num3 > num2)) {
+      return num3 + 1;
+  }
+    else if (num1 === 0 || num2 === 0 || num3 === 0) {
+    return 'Error'
+  }
+  else return 'False'
+  }
 
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
