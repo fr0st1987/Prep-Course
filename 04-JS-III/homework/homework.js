@@ -1,9 +1,8 @@
 // No cambies los nombres de las funciones.
 
 function devolverPrimerElemento(array) {
-  // Devuelve el primer elemento de un  array (pasado por parametro)
-  // Tu código:
-console.log(devolverPrimerElemento[0])
+  let devolverPrimerElemento = [0, 2, 3, 4]
+  console.log(devolverPrimerElemento[0]);
 }
 
 
