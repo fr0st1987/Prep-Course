@@ -24,7 +24,7 @@ function incrementarPorUno(array) {
   for (i = 0; i < incrementarPorUno.length; i++) {
     return array[array + 1]
   }
-
+}
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
@@ -38,7 +38,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-return array[array.unshift(elemento)] }
+  array.unshift(elemento);
+return array }
 
 
 function dePalabrasAFrase(palabras) {
