@@ -1,8 +1,8 @@
 // No cambies los nombres de las funciones.
 
 function devolverPrimerElemento(array) {
-  let devolverPrimerElemento = [0, 2, 3, 4]
-  console.log(devolverPrimerElemento[0]);
+  let devolverPrimerElemento = [0, 2, 3, 4];
+  return devolverPrimerElemento[0];
 }
 
 
