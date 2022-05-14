@@ -1,20 +1,20 @@
 // No cambies los nombres de las funciones.
 
 function devolverPrimerElemento(array) {
-  let devolverPrimerElemento = [0, 2, 3, 4];
-  return devolverPrimerElemento[0];
+ return array[0]
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-}
+return array[array.length - 1]}
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+return array.length
 }
 
 
@@ -23,13 +23,17 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+var array2 = []
+for (i = 0; i < array.length; i++) {
+array2[i] = (array[i] + 1)}
+return array2
 }
-
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+array.push['Joaco']
 }
 
 
