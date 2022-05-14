@@ -30,10 +30,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-var array2 = [];
-array = array[array2.push(elemento)];
-return array2 }
-
+return array[array.length(elemento)]}
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -41,7 +38,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-}
+return array[array.unshift(elemento)] }
 
 
 function dePalabrasAFrase(palabras) {
