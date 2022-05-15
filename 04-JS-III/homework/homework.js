@@ -24,7 +24,7 @@ function incrementarPorUno(array) {
   array2 = []
   for (i = 0; i < incrementarPorUno.length; i++) {
     array2 = array[i] + 1
-    return array
+    return array2
   }
 }
 
@@ -32,7 +32,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array.push(elemento);
+  array[array.length] = elemento;
 return array}
 
 
@@ -51,14 +51,14 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-}
+palabras.join = ''}
 
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-}
+return array.find(elemento) }
 
 
 function agregarNumeros(numeros) {
