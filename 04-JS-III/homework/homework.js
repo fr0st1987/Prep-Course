@@ -22,10 +22,9 @@ function incrementarPorUno(array) {
   // y devuelve el array
   // Tu código:
   array2 = []
-  for (i = 0; i < incrementarPorUno.length; i++) {
-    array2 = array[i] + 1
-    return array2
-  }
+  for (i = 0; i < array.length; i++) {
+    array2 = array[i] + 1 
+  } return array2
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
@@ -51,21 +50,30 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-palabras.join = ''}
+return palabras.join = ' '}
 
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-return array.find(elemento) }
+for (i = 0; i < array.length; i++) {
+  if (array[i] = elemento) {
+    return true
+  }
+}
+}
 
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+let enteros = 0
+for (i = 0; i < numeros.length, i++) {
+  enteros = enteros + numeros[i]
 }
+return enteros}
 
 
 function promedioResultadosTest(resultadosTest) {
