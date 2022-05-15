@@ -23,7 +23,7 @@ function incrementarPorUno(array) {
   // Tu código:
   array2 = []
   for (i = 0; i < incrementarPorUno.length; i++) {
-    array2 = array[array + 1]
+    array2 = array[i] + 1
     return array
   }
 }
@@ -32,8 +32,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array[array.length(elemento)]
-return }
+  array.push(elemento);
+return array}
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
