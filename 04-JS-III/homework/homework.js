@@ -12,7 +12,7 @@ return array[array.length - 1]; }
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-return array[array.length]
+return array.length;
 }
 
 
@@ -22,9 +22,10 @@ function incrementarPorUno(array) {
   // y devuelve el array
   // Tu código:
 const array2 = []
-for (i = 0; i < array2.length; i++) {
-return array = array2[i + 1]
+for (i = 0; i < array.length; i++) {
+array2[i] = array[i] + 1
 }
+return array2
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
