@@ -31,9 +31,10 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu codigo:
-  array = array.push(elemento) ;
-  return array
+  const array2 = array.push(elemento);
+  return array;
 }
+
 function agregarItemAlComienzoDelArray(array, elemento) {
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
