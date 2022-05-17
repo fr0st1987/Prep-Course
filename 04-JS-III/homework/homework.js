@@ -21,9 +21,9 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-let array = [1, 2, 3, 4]
-for (i = 0; i < array.length; i++) {
-return array[i + 1]
+const array2 = []
+for (i = 0; i < array2.length; i++) {
+return array = array2[i + 1]
 }
 }
 
@@ -31,7 +31,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
- }
+}
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
