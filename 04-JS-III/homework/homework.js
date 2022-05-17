@@ -15,7 +15,6 @@ function obtenerLargoDelArray(array) {
 return array.length;
 }
 
-
 function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
@@ -31,10 +30,10 @@ return array2
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
-  // Tu código:
+  // Tu codigo:
+  array = array.push(elemento) ;
+  return array
 }
-
-
 function agregarItemAlComienzoDelArray(array, elemento) {
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
