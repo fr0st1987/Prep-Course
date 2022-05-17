@@ -31,7 +31,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu codigo:
-  const array2 = array.push(elemento);
+  array[array.length] = elemento
   return array;
 }
 
@@ -39,7 +39,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
   // Pista: usa el método `.unshift`
-  // Tu código:
+  return array[array.unshift(elemento)]// Tu código:
   }
 
 
