@@ -58,7 +58,8 @@ function arrayContiene(array, elemento) {
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
 if ((array.indexOf(elemento)) != - 1) {
-  return true }
+  return true;}
+  else {return false}
 }
 
 
