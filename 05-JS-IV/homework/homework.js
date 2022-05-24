@@ -6,71 +6,97 @@ function crearGato (nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
+const obj = {
+  nombre: nombre,
+  edad: edad,
+  meow: function meow () {return 'Meow!'}
 }
-
+return obj
+}
 function agregarPropiedad (objeto, property) {
   // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
-}
+objeto[property] = null
+return objeto}
 
 function invocarMetodo (objeto, metodo) {
   // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-}
+objeto[metodo]()}
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-
+const a = objetoMisterioso['numeroMisterioso'] * 5
+return a
 }
 
 function eliminarPropiedad (objeto, unaPropiedad) {
   // Elimina la propiedad de objeto cuyo nombre está pasado por el parametro unaPropiedad
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
-  // Tu código:
+objeto[unaPropiedad]
+delete objeto[unaPropiedad]// Tu código:
+return objeto
 }
 
 function nuevoUsuario (nombre, email, password) {
-  // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
-  // Devuelve el objeto
+  const newObject = {
+    nombre: nombre,
+    email: email,
+    password: password}
+    return newObject
+// Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
+// Devuelve el objeto
   // Tu código:
-
 }
 
 function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-}
+if (usuario['email'])
+return true;
+else return false}
 
 function tienePropiedad (objeto, propiedad) {
   // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-}
+if (objeto[propiedad]) return true;
+else return false}
 
-function verificarPassword (usuario, password) {
+// podes usar el metodo del objeto.
+//return objeto.hasOwnProperty(propiedad)}
+
+function verificarPassword (usuario, password) { //PREGUNTAR POR QUE?
+  if (usuario['password'] == password) {return true};
+return false}
   // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // Tu código:
-}
+
 
 function actualizarPassword (usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
-}
+  usuario.password = nuevaPassword
+  return usuario}
 
 function agregarAmigo (usuario, nuevoAmigo) {
-  // "usuario" tiene una propiedad llamada "amigos" que es un array
+usuario.amigos = [nuevoAmigo]
+return usuario
+
+// o usuarios.amigos.push(nuevoAmigo) return usuario
+// "usuario" tiene una propiedad llamada "amigos" que es un array
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
@@ -82,7 +108,11 @@ function pasarUsuarioAPremium (usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
-}
+//it('should return the users array with each user\'s esPremium property set to true', function() {
+for (i = 0; i < usuarios.length; i++) {
+  usuarios[i].esPremium = true
+}}
+ // ];
 
 function sumarLikesDeUsuario (usuario) {
   // "usuario" tiene una propiedad llamada "posts" que es un array
