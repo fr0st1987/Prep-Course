@@ -6,100 +6,102 @@ function crearGato (nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-const obj = {
+const object = {
   nombre: nombre,
   edad: edad,
-  meow: function meow () {return 'Meow!'}
+  meow: function() {return 'Meow!'}
 }
-return obj
+return object
 }
+
 function agregarPropiedad (objeto, property) {
   // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
-objeto[property] = null
-return objeto}
+objeto[property] = null;
+return objeto
+}
 
 function invocarMetodo (objeto, metodo) {
   // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-objeto[metodo]()}
+objeto[metodo]()
+}
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-const a = objetoMisterioso['numeroMisterioso'] * 5
-return a
+//const objetoMisterioso = {
+// numeroMisterioso: 4 }
+const a = objetoMisterioso.numeroMisterioso * 5;
+return a;
 }
 
 function eliminarPropiedad (objeto, unaPropiedad) {
   // Elimina la propiedad de objeto cuyo nombre está pasado por el parametro unaPropiedad
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
-objeto[unaPropiedad]
-delete objeto[unaPropiedad]// Tu código:
+delete objeto[unaPropiedad]
 return objeto
 }
 
 function nuevoUsuario (nombre, email, password) {
-  const newObject = {
-    nombre: nombre,
-    email: email,
-    password: password}
-    return newObject
 // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
 // Devuelve el objeto
-  // Tu código:
+// Tu código:
+const newObject = {
+  nombre: nombre,
+  email: email,
+  password: password
+}
+return newObject
 }
 
 function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-if (usuario['email'])
-return true;
-else return false}
-
+if (usuario['email']) return true;
+else return false;
+}
 function tienePropiedad (objeto, propiedad) {
   // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
 if (objeto[propiedad]) return true;
-else return false}
-
+  else return false
+}
 // podes usar el metodo del objeto.
 //return objeto.hasOwnProperty(propiedad)}
 
 function verificarPassword (usuario, password) { //PREGUNTAR POR QUE?
-  if (usuario['password'] == password) {return true};
-return false}
   // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // Tu código:
-
+if (usuario['password'] === password) return true;
+else return false}
 
 function actualizarPassword (usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
-  usuario.password = nuevaPassword
-  return usuario}
+usuario.password = nuevaPassword
+return usuario}
 
 function agregarAmigo (usuario, nuevoAmigo) {
-usuario.amigos = [nuevoAmigo]
-return usuario
-
 // o usuarios.amigos.push(nuevoAmigo) return usuario
 // "usuario" tiene una propiedad llamada "amigos" que es un array
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
+usuario.amigos = [nuevoAmigo]
+return usuario
 }
 
 function pasarUsuarioAPremium (usuarios) {
@@ -108,11 +110,13 @@ function pasarUsuarioAPremium (usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
-//it('should return the users array with each user\'s esPremium property set to true', function() {
-for (i = 0; i < usuarios.length; i++) {
-  usuarios[i].esPremium = true
-}}
- // ];
+  // usuarios = [usuario{esPremium, false}], [usuario{esPremium, true}]
+  for (i = 0; i < usuarios.length; i++) {
+    usuarios[i].esPremium = true}
+  return usuarios}
+
+  
+
 
 function sumarLikesDeUsuario (usuario) {
   // "usuario" tiene una propiedad llamada "posts" que es un array
@@ -121,11 +125,19 @@ function sumarLikesDeUsuario (usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  // var usuario = {
+  // posts: 4
+  //}
+let suma = 0
+for (let i = 0; i < usuario.posts.length; i++) {
+suma = suma + usuario.posts[i].likes
 }
+return suma}
 
 function agregarMetodoCalculoDescuento (producto) {
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
-  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
+  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") 
+  //y "porcentajeDeDescuento" para obtener el descuento
   // El método resta el descuento del precio y devuelve el precio con descuento
   // Devuelve el objeto "producto" al final de la función
   // Ejemplo:
@@ -133,8 +145,17 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
+  // producto = {
+  // precio: 20
+  // descuento: 0.2
+  // calcularPrecioDescuento: 20 - (20 * 0.2) }
 
+producto.calcularPrecioDescuento = function (){
+return this.precio - (this.precio * this.porcentajeDeDescuento)  
 }
+return producto
+}
+
 
 // No modificar nada debajo de esta línea
 // --------------------------------
